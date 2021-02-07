@@ -9,7 +9,6 @@ import numeral from "numeral";
 import Map from "./Map";
 import "leaflet/dist/leaflet.css";
 
-
 function App() {
   const [country, setInputCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
@@ -72,8 +71,8 @@ function App() {
         <div className="app__header"> 
                 <h1>COVID-19 TRACKER</h1>
                 <FormControl className="app__dropdown">
-                  <Select variant='outlined' value={country}  onChange = {onCountryChange}>
-                    <MenuItem value="worldwide">Wordlwide</MenuItem>
+                  <Select variant='outlined' color='secondary' value={country}  onChange = {onCountryChange}>
+                    <MenuItem color="secondary" value="worldwide">Wordlwide</MenuItem>
                     {countries.map((country)=>(
                       <MenuItem value={country.value} >{country.name}</MenuItem>
                     ))}
