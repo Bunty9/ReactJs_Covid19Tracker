@@ -30,8 +30,10 @@ function App() {
           value:country.countryInfo.iso2
           }
         ))
-        // setTabledata(data);
-        setcoutries(countries);
+        let sortedData = sortData(data);
+        setCountries(countries);
+        setMapCountries(data);
+        setTableData(sortedData);
         },
       );}
       getCountriesData();
@@ -104,10 +106,10 @@ function App() {
       <Card className="app__right">
         <CardContent>
           <div className="app__information">
-            {/* <h3>Live Cases by Country</h3>
+            <h3>Live Cases by Country</h3>
             <Table countries={tableData} />
             <h3>Worldwide new {casesType}</h3>
-            <LineGraph casesType={casesType} /> */}
+            {/* <LineGraph casesType={casesType} /> */}
           </div>
         </CardContent>
       </Card>
